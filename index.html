@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-with, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>仔仔与妞妞的故事</title>
+</head>
+
+<body>
+
+<h1 class="display-1">阿仔与他的小妞</h1>
+
+<div id='app'>
+<button type="button" class="btn btn-lg btn-danger" @click="add">点赞</button>
+<span class="badge badge-pill badge-primary">{{like}}</span>
+</div>
+
+<img src="img.jpg" class="img-fluid img-thumbnail"/>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    like: 0
+  },
+  methods: {
+    add:function(){
+      this.like++;
+    }
+  }
+})
+</script>
+</body>
+
+</html>
